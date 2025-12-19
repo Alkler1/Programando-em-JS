@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com Dom</title>
+    <style>
+        body { 
+            background-color: rgb(83, 76, 87);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <!--escrevendo um comentário aqui -->
+    <h1>Iniciando estudos com DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">clique em mim</div>
+    <!--window.alert(p1.innerText) Só copiar e colocar no caso de querer fazer um alert-->
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        corpo.style.background = "ffff"
+        p1.style.color = 'blue'
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'estou aguardando...'
+        window.document.getElementById('msg').innerText = 'Olá'*/
+        /*var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Olá!'*/
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
